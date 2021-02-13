@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Vue Js - HelloWorld App</title>
+
+    <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+    <!-- Using via Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- https://tailwindcss.com/docs/installation -->
+    <!-- Using Tailwind via CDN -->
+    <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+
+<body>
+    <div id="app" class="container max-w-xl mx-auto my-10 space-y-3 flex-col">
+        <h1 class="text-xl text-center">Genshin Gallery ( {{countUndone}} )</h1>
+        <div class="w-48 m-auto">
+            <ul>
+                <li v-for="(task,index) in tasks" :class="{done: task.done}" v-on:click="toggleDone(index)" class="border-blue-100 bg-gray-100 rounded-2xl mt-10 rounded-t-none">
+                    <img v-bind:src="task.url" class="rounded-2xl rounded-t-none">
+                    <i v-show="task.done" class="fas fa-2x fa-heart text-red-700 ml-16 my-4 bg-white p-4 rounded-2xl shadow-2xl"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- my main.js -->
+    <script src="./main.js"></script>
+</body>
+
+</html>
