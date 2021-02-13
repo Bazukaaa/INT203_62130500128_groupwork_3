@@ -1,6 +1,6 @@
 # INT203_62130500128_groupwork_3
 
-![alt text](/62130500128_groupwork_3/images/screen_work_3.jpg/?raw=true "Screenshot Genshin.gg")
+![alt text](/62130500128_groupwork_3/screen_work_3.jpg/?raw=true "Screenshot Genshin.gg")
 
 #### CSS Framework
 - https://tailwindcss.com/
